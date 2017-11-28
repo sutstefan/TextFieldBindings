@@ -14,6 +14,8 @@
 		CF5589F31FCD79BB00555BF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF5589F11FCD79BB00555BF9 /* LaunchScreen.storyboard */; };
 		CF5589FE1FCD79BB00555BF9 /* TextFieldBindingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF5589FD1FCD79BB00555BF9 /* TextFieldBindingsTests.swift */; };
 		CF558A091FCD79BC00555BF9 /* TextFieldBindingsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF558A081FCD79BC00555BF9 /* TextFieldBindingsUITests.swift */; };
+		CF558A1A1FCD7AE400555BF9 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF558A191FCD7AE400555BF9 /* Dynamic.swift */; };
+		CF558A1D1FCD7C2900555BF9 /* BindingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF558A1C1FCD7C2900555BF9 /* BindingTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		CF558A041FCD79BC00555BF9 /* TextFieldBindingsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TextFieldBindingsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF558A081FCD79BC00555BF9 /* TextFieldBindingsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldBindingsUITests.swift; sourceTree = "<group>"; };
 		CF558A0A1FCD79BC00555BF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF558A191FCD7AE400555BF9 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		CF558A1C1FCD7C2900555BF9 /* BindingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,10 @@
 		CF5589E71FCD79BB00555BF9 /* TextFieldBindings */ = {
 			isa = PBXGroup;
 			children = (
-				CF5589E81FCD79BB00555BF9 /* AppDelegate.swift */,
-				CF5589EA1FCD79BB00555BF9 /* ViewController.swift */,
-				CF5589EC1FCD79BB00555BF9 /* Main.storyboard */,
-				CF5589EF1FCD79BB00555BF9 /* Assets.xcassets */,
-				CF5589F11FCD79BB00555BF9 /* LaunchScreen.storyboard */,
-				CF5589F41FCD79BB00555BF9 /* Info.plist */,
+				CF558A161FCD7A8E00555BF9 /* App Files */,
+				CF558A171FCD7AB900555BF9 /* Controller */,
+				CF558A181FCD7AC000555BF9 /* Model */,
+				CF558A1B1FCD7C0F00555BF9 /* View */,
 			);
 			path = TextFieldBindings;
 			sourceTree = "<group>";
@@ -123,6 +125,42 @@
 				CF558A0A1FCD79BC00555BF9 /* Info.plist */,
 			);
 			path = TextFieldBindingsUITests;
+			sourceTree = "<group>";
+		};
+		CF558A161FCD7A8E00555BF9 /* App Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF5589EF1FCD79BB00555BF9 /* Assets.xcassets */,
+				CF5589F11FCD79BB00555BF9 /* LaunchScreen.storyboard */,
+				CF5589F41FCD79BB00555BF9 /* Info.plist */,
+				CF5589E81FCD79BB00555BF9 /* AppDelegate.swift */,
+				CF5589EC1FCD79BB00555BF9 /* Main.storyboard */,
+			);
+			path = "App Files";
+			sourceTree = "<group>";
+		};
+		CF558A171FCD7AB900555BF9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF5589EA1FCD79BB00555BF9 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF558A181FCD7AC000555BF9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF558A191FCD7AE400555BF9 /* Dynamic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF558A1B1FCD7C0F00555BF9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF558A1C1FCD7C2900555BF9 /* BindingTextField.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF558A1A1FCD7AE400555BF9 /* Dynamic.swift in Sources */,
+				CF558A1D1FCD7C2900555BF9 /* BindingTextField.swift in Sources */,
 				CF5589EB1FCD79BB00555BF9 /* ViewController.swift in Sources */,
 				CF5589E91FCD79BB00555BF9 /* AppDelegate.swift in Sources */,
 			);
@@ -427,7 +467,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TextFieldBindings/Info.plist;
+				DEVELOPMENT_TEAM = JV7AQ8ED57;
+				INFOPLIST_FILE = "$(SRCROOT)/TextFieldBindings/App Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.colecu.TextFieldBindings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +482,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TextFieldBindings/Info.plist;
+				DEVELOPMENT_TEAM = JV7AQ8ED57;
+				INFOPLIST_FILE = "$(SRCROOT)/TextFieldBindings/App Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = io.colecu.TextFieldBindings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
